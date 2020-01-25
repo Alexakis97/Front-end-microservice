@@ -8,7 +8,7 @@ public class Config implements WebMvcConfigurer{
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/home").setViewName("index");
 		registry.addViewController("/").setViewName("index");
-		
+
 
 	}
 }

@@ -3,6 +3,10 @@ package com.service.minimicroservice.restcontroller;
 
 
 
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +18,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.service.minimicroservice.objects.FormRec;
 import com.service.minimicroservice.objects.Mail;
+import com.service.minimicroservice.objects.MyObject;
 import com.service.minimicroservice.stripe.ChargeRequest;
 import com.service.minimicroservice.stripe.ChargeRequest.Currency;
 import com.service.minimicroservice.stripe.StripeService;
@@ -88,10 +94,21 @@ public class MyController {
 		
 	}
 	
-	
+	@RequestMapping(value = "/api", method = RequestMethod.GET)
+	public String getApi(Model model) {
+		model.addAttribute("ApiObject", new MyObject());
+		
+		//return new ModelAndView("api", "randomSkaicius", randomSkaicius()); kai to pernei to thymeleaf th:action="@{/api}+${randomSkaicius}"
+		return "api";
+	}
 	  
-
-	
+	/*
+	  public int randomSkaicius() {
+	        Random rand = new Random();
+	        int skaicius = (int) (Math.random() * 900000 + 100000);
+	        return skaicius;
+	    }
+	*/
 	
 
 }

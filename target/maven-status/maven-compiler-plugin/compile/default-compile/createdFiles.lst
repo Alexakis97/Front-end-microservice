@@ -1,0 +1,9 @@
+com/service/minimicroservice/objects/Mail.class
+com/service/minimicroservice/restcontroller/MyController.class
+com/service/minimicroservice/stripe/ChargeRequest.class
+com/service/minimicroservice/configuration/Config.class
+com/service/minimicroservice/MiniMicroserviceApplication.class
+com/service/minimicroservice/objects/MyObject.class
+com/service/minimicroservice/stripe/StripeService.class
+com/service/minimicroservice/stripe/ChargeRequest$Currency.class
+com/service/minimicroservice/objects/FormRec.class
