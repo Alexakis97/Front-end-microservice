@@ -1,1 +1,1 @@
-# Single - Microservice
+# Single Microservice
